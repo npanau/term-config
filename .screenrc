@@ -1,0 +1,14 @@
+# ~/.screenrc
+startup_message       off
+defshell -bash      # dash makes it a login shell
+
+caption always "%?%F%{-b bc}%:%{-b dk}%?%C|%D|%M %d|%H%?%F%{wk}%? %L=%-Lw%45>%{w}%n%f*%t%{-}%+Lw%-0<"
+split -v #split verticallement
+resize -h 200 #redimensionne 0
+screen #lance un prompte dans 0
+focus #change de fenetre
+split # split horizontalement
+screen #lance un prombte dans 1
+focus #change de fenêtre
+screen #lance un promte dans 2
+focus #retourne dans 0

@@ -1,0 +1,49 @@
+#Web stuff
+alias apache2='sudo apachectl -k'
+alias vhost='cd /etc/apache2/virtualhosts/'
+alias hosts='sudo vim /etc/hosts'
+alias importdump='mysql -u root -proot'
+alias exportdump='mysqldump -u root -proot --skip-triggers'
+alias rmdsstores='find ./ -type f | grep .DS_Store | xargs rm'
+
+alias sf='php -d memory_limit=-1 app/console'
+alias vim='/usr/local/bin/vim'
+alias screen='/usr/local/Cellar/screen/4.2.1/bin/screen'
+
+#Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
+
+#Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+#Coulor
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+    colorflag="--color"
+else # OS X `ls`
+    colorflag="-G"
+fi
+
+#Shortcuts
+alias g="git"
+alias l="ls -lF ${colorflag}"
+alias la="ls -laF ${colorflag}"
+
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
+#symfony
+alias sf='php app/console'
+
+#php
+alias php='/usr/local/Cellar/php55/5.5.18/bin/php'
+alias php53='/usr/local/Cellar/php53/5.3.29/bin/php'
+
+#php-switch
+alias phpswitch='~/php-switch'
+
+#todo.txt
+alias t='/Users/nico/Dropbox/todo/todo.sh -d Users/nico/Dropbox/todo/todo.cfg'

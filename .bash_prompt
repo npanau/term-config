@@ -1,0 +1,38 @@
+# Configure colors, if available.
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    GRAY='\[\e[0;30m\]'
+    CYAN='\[\e[1;36m\]'
+    LIGHT_CYAN='\[\e[0;36m\]'
+    RED='\[\e[1;31m\]'
+    GREEN='\[\033[0;32m\]'
+    NO_COLOR='\[\e[0m\]'
+
+else
+    GRAY=
+    CYAN=
+    LIGHT_CYAN=
+    RED=
+    GREEN=
+    NO_COLOR=
+fi
+
+# Function to assemble the Git part of our prompt.
+git_prompt ()
+{
+    if ! git rev-parse --git-dir > /dev/null 2>&1; then
+        return 0
+    fi
+
+    git_branch=$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
+
+    if git diff --quiet 2>/dev/null >&2; then
+        git_color="$GREEN" 
+    else
+        git_color="$RED" 
+    fi
+
+    echo "${NO_COLOR}[$git_color$git_branch${NO_COLOR}]" 
+}
+
+PROMPT_COMMAND='PS1="\n${CYAN}\u @ \h : \w $(git_prompt) $ ${NO_COLOR}"'
+
