@@ -6,5 +6,5 @@
  * @abstract{{/abstract}}{{#final}}
  * @final{{/final}}
  *
- * @author ${2:David Jegat} <${3:david.jegat@gmail.com}>
+ * @author ${2:Nicolas Panau} <${3:npanau@umanit.fr}>
  */

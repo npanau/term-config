@@ -89,7 +89,7 @@ Plugin 'docteurklein/vim-symfony.git'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'Shougo/neocomplete.vim.git'
 Plugin 'spf13/PIV'
-Plugin 'vim-scripts/AutoComplPop.git'
+"Plugin 'vim-scripts/AutoComplPop.git'
 Plugin 'ervandew/supertab'
 
 Plugin 'tobyS/pdv'
@@ -308,6 +308,12 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:UltiSnipsDontReverseSearchPath = 1 " for override to work with Vundle
+
+"~~~~~~~~~~~~~~~~~~~~
+" PIV
+"~~~~~~~~~~~~~~~~~~~~
+set nofoldenable
+let g:DisableAutoPHPFolding = 1
 
 "~~~~~~~~~~~~~~~~~~~~
 " PDV
