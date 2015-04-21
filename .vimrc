@@ -235,7 +235,8 @@ command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>]
 "~~~~~~~~~~~~~~~~~~~~
 " ctrlp
 "~~~~~~~~~~~~~~~~~~~~
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_working_path_mode = 'ra'
 nnoremap <silent> <D-t> :CtrlP<CR>
 nnoremap <silent> <D-r> :CtrlPMRU<CR>
 let g:ctrlp_custom_ignore = {
@@ -320,6 +321,23 @@ let g:DisableAutoPHPFolding = 1
 "~~~~~~~~~~~~~~~~~~~~
 let g:pdv_template_dir = $HOME ."/.vim/doc_templates"
 nnoremap <Leader>d :call pdv#DocumentWithSnip()<CR>
+
+"~~~~~~~~~~~~~~~~~~~~
+" PHPNamespace
+"~~~~~~~~~~~~~~~~~~~~
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
+inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+noremap <Leader>e :call PhpExpandClass()<CR>
+
+"~~~~~~~~~~~~~~~~~~~~
+" vim-symfony configuration
+"~~~~~~~~~~~~~~~~~~~~
+let g:symfony_app_console_caller= "php"
+let g:symfony_app_console_path= "app/console"
+noremap <leader>sr :call CompleteSymfonyRouter()<CR>
+noremap <leader>sc :call CompleteSymfonyContainer()<CR>
+noremap <silent> <C-t> :CtrlPTag<cr>
 
 "~~~~~~~~~~~~~~~~~~~~
 " Functions
