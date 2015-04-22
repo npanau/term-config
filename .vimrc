@@ -75,6 +75,9 @@ Plugin 'majutsushi/tagbar.git'
 Plugin 'godlygeek/tabular.git'
 "Plugin 'tpope/vim-surround.git'
 
+" Rafraichissement auto de ctags
+Plugin 'craigemery/vim-autotag'
+
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'vim-scripts/AutoClose.git'
 Plugin 'scrooloose/nerdcommenter.git'
@@ -242,6 +245,14 @@ nnoremap <silent> <D-r> :CtrlPMRU<CR>
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v([\/]\.(git|hg|svn))|([\/]vendor)|([\/]node_modules)|([\/]compiled)|([\/]dist)|([\/]app/lib)|([\/]bower_components)|([\/]doc)$',
   \ }
+
+"~~~~~~~~~~~~~~~~~~~~
+" ctrlptagjump
+"~~~~~~~~~~~~~~~~~~~~
+" Affiche la liste des tags
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
+let g:ctrlp_tjump_only_silent = 1 " si 1 résultat, ouverture directe
 
 "~~~~~~~~~~~~~~~~~~~~
 " Tagbar
