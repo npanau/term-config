@@ -89,6 +89,7 @@ Plugin 'scrooloose/syntastic.git'
 
 "Plugin 'Valloric/YouCompleteMe.git'
 Plugin 'hail2u/vim-css3-syntax.git'
+Plugin 'ap/vim-css-color'
 
 "Plugin 'evidens/vim-twig.git'
 "Plugin 'tokutake/twig-indent.git'
