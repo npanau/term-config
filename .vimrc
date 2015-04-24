@@ -76,7 +76,9 @@ Plugin 'godlygeek/tabular.git'
 "Plugin 'tpope/vim-surround.git'
 
 " Rafraichissement auto de ctags
-Plugin 'craigemery/vim-autotag'
+"Plugin 'craigemery/vim-autotag'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
 
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'vim-scripts/AutoClose.git'
@@ -87,7 +89,11 @@ Plugin 'scrooloose/syntastic.git'
 
 "Plugin 'Valloric/YouCompleteMe.git'
 Plugin 'hail2u/vim-css3-syntax.git'
-Plugin 'evidens/vim-twig.git'
+
+"Plugin 'evidens/vim-twig.git'
+"Plugin 'tokutake/twig-indent.git'
+Plugin 'beyondwords/vim-twig'
+
 Plugin 'docteurklein/vim-symfony.git'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'Shougo/neocomplete.vim.git'
@@ -252,7 +258,8 @@ let g:ctrlp_custom_ignore = {
 " Affiche la liste des tags
 nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
-let g:ctrlp_tjump_only_silent = 1 " si 1 résultat, ouverture directe
+" si 1 résultat, ouverture directe
+"let g:ctrlp_tjump_only_silent = 1 
 
 "~~~~~~~~~~~~~~~~~~~~
 " Tagbar
@@ -365,7 +372,7 @@ endfunc
 nnoremap <F3> :call NumberToggle()<cr>
 
 " Redraw screen
-nmap <leader>r :redraw!<cr>
+nmap <leader>r :redraw!<cr> :syntax on<cr>
 
 " automatically remove trailing whitespace before write
 function! StripTrailingWhitespace()
@@ -377,7 +384,7 @@ function! StripTrailingWhitespace()
   normal `Z
 endfunction
 " Supprime les espaces inutiles à la sauvegarde
-autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,tpl,xml,yml,perl,sql,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 " -- Switch la couleur du background de Solarize en pressant fn+F5 (solarize est fournit avec
 "  deux couleurs une claire, une foncée)
