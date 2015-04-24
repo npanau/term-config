@@ -240,7 +240,7 @@ inoremap (<cr> (<cr>)<c-o><s-o>
 " Usage :Se <word> <filetype>
 " Résultats précédants / suivants : :cp / :cn
 " :cwindow pour ouvrir la fenêtre de résultat
-command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
+command! -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
 
 "~~~~~~~~~~~~~~~~~~~~
 " ctrlp
