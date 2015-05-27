@@ -71,6 +71,7 @@ Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'nanotech/jellybeans.vim.git'
 Plugin 'jistr/vim-nerdtree-tabs.git'
 Plugin 'majutsushi/tagbar.git'
+Plugin 'edsono/vim-matchit'
 
 Plugin 'godlygeek/tabular.git'
 "Plugin 'tpope/vim-surround.git'
@@ -81,10 +82,13 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 
 Plugin 'tpope/vim-fugitive.git'
-Plugin 'vim-scripts/AutoClose.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+Plugin 'jiangmiao/auto-pairs'
+
 Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'terryma/vim-multiple-cursors.git'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+
 Plugin 'scrooloose/syntastic.git'
 
 "Plugin 'Valloric/YouCompleteMe.git'
@@ -183,12 +187,12 @@ set wildmode=list:longest           " BASH style completion
 "au FileType c,cpp,java,go,php,javascript,python,twig,xml,yml
 
 au BufNewFile,BufRead *.tpl set ft=smarty
-au BufNewFile,BufRead *.twig set ft=htmljinja
+au BufNewFile,BufRead *.twig set ft=twig
 
 au BufNewFile,BufRead *md set ft=markdown
 
 "au filetype javascript set omnifunc=javascriptcomplete#CompleteJS
-"au filetype html set omnifunc=htmlcomplete#CompleteTags
+au filetype html set omnifunc=htmlcomplete#CompleteTags
 "au filetype css set omnifunc=csscomplete#CompleteCSS
 "au filetype php set omnifunc=phpcomplete#CompletePHP
 
@@ -256,6 +260,7 @@ let g:ctrlp_custom_ignore = {
 "~~~~~~~~~~~~~~~~~~~~
 " ctrlptagjump
 "~~~~~~~~~~~~~~~~~~~~
+noremap <silent> <C-t> :CtrlPTag<cr>
 " Affiche la liste des tags
 nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
@@ -356,7 +361,15 @@ let g:symfony_app_console_caller= "php"
 let g:symfony_app_console_path= "app/console"
 noremap <leader>sr :call CompleteSymfonyRouter()<CR>
 noremap <leader>sc :call CompleteSymfonyContainer()<CR>
-noremap <silent> <C-t> :CtrlPTag<cr>
+
+let g:symfony_enable_shell_mapping = 0 "disable the mapping of symfony console
+" Use your key instead of default key which is <C-F>
+map <leader>v :execute ":!"g:symfony_enable_shell_cmd<CR>
+
+"~~~~~~~~~~~~~~~~~~~~
+" symfony shortcuts
+"~~~~~~~~~~~~~~~~~~~~
+set path+=**
 
 "~~~~~~~~~~~~~~~~~~~~
 " Functions
