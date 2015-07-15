@@ -38,10 +38,6 @@ alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 #symfony
 alias sf='php app/console'
 
-#php
-alias php='/usr/local/Cellar/php55/5.5.18/bin/php'
-alias php53='/usr/local/Cellar/php53/5.3.29/bin/php'
-
 #php-switch
 alias phpswitch='~/php-switch'
 

@@ -63,6 +63,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'SirVer/ultisnips.git'
+Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'ivalkeen/vim-ctrlp-tjump.git'
 
@@ -72,6 +73,7 @@ Plugin 'nanotech/jellybeans.vim.git'
 Plugin 'jistr/vim-nerdtree-tabs.git'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'edsono/vim-matchit'
+Plugin 'ConradIrwin/vim-bracketed-paste'
 
 Plugin 'godlygeek/tabular.git'
 "Plugin 'tpope/vim-surround.git'

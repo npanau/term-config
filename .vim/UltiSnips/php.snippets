@@ -424,3 +424,31 @@ endsnippet
 snippet th=n "this equal null" !b
 \$this->$1 = null;$0
 endsnippet
+
+snippet sfclass "Symfony controller class" !
+<?php
+`!p snip.rv = namespace(snip, path)`
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+class `!p snip.rv = snip.basename` extends Controller
+{
+    ${0}
+
+}
+endsnippet
+
+snippet act "Symfony controller action" !
+/**
+ * ${1}
+ */
+public function ${2}Action(Request $request)
+{
+    ${0}
+    return array();
+}
+endsnippet
+
