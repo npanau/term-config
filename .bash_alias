@@ -43,3 +43,5 @@ alias phpswitch='~/php-switch'
 
 #todo.txt
 alias t='/Users/nico/Dropbox/todo/todo.sh -d Users/nico/Dropbox/todo/todo.cfg'
+compdef _todo.sh t
+export PATH=/Users/nico/Dropbox/todo:$PATH
