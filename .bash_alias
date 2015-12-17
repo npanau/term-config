@@ -4,6 +4,7 @@ alias vhost='cd /etc/apache2/virtualhosts/'
 alias hosts='sudo vim /etc/hosts'
 alias importdump='mysql -u root -proot'
 alias exportdump='mysqldump -u root -proot --skip-triggers'
+alias exportpgdump='pg_dump -O -c -x'
 alias rmdsstores='find ./ -type f | grep .DS_Store | xargs rm'
 
 alias sf='php -d memory_limit=-1 app/console'
@@ -34,9 +35,6 @@ alias l="ls -lF ${colorflag}"
 alias la="ls -laF ${colorflag}"
 
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
-
-#symfony
-alias sf='php app/console'
 
 #php-switch
 alias phpswitch='~/php-switch'
