@@ -11,7 +11,6 @@ alias snifffix='phpcbf --standard=UmanitSymfony2 '
 
 alias sf='php -d memory_limit=-1 app/console'
 alias vim='/usr/local/bin/vim'
-alias screen='/usr/local/Cellar/screen/4.2.1/bin/screen'
 
 #Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
@@ -37,9 +36,6 @@ alias l="ls -lF ${colorflag}"
 alias la="ls -laF ${colorflag}"
 
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
-
-#php-switch
-alias phpswitch='~/php-switch'
 
 #todo.txt
 alias t='/Users/nico/Dropbox/todo/todo.sh -d Users/nico/Dropbox/todo/todo.cfg'

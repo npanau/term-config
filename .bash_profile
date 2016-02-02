@@ -1,7 +1,6 @@
 # Taille de l'historique
 HISTFILESIZE=1000000000000
 
-
 # Aliases
 source ~/.bash_alias
 

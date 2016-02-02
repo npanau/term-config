@@ -62,10 +62,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree.git'
-Plugin 'SirVer/ultisnips.git'
-Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim.git'
-Plugin 'ivalkeen/vim-ctrlp-tjump.git'
 
 Plugin 'bling/vim-airline.git'
 Plugin 'altercation/vim-colors-solarized.git'
@@ -76,61 +73,25 @@ Plugin 'edsono/vim-matchit'
 Plugin 'ConradIrwin/vim-bracketed-paste'
 
 Plugin 'godlygeek/tabular.git'
-"Plugin 'tpope/vim-surround.git'
-
-" Rafraichissement auto de ctags
-"Plugin 'craigemery/vim-autotag'
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
 
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
-Plugin 'jiangmiao/auto-pairs'
-
-Plugin 'scrooloose/nerdcommenter.git'
-Plugin 'terryma/vim-multiple-cursors.git'
-
 Plugin 'scrooloose/syntastic.git'
 
-"Plugin 'Valloric/YouCompleteMe.git'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'ap/vim-css-color'
 
-"Plugin 'evidens/vim-twig.git'
-"Plugin 'tokutake/twig-indent.git'
 Plugin 'beyondwords/vim-twig'
 
-Plugin 'docteurklein/vim-symfony.git'
-Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'Shougo/neocomplete.vim.git'
 Plugin 'spf13/PIV'
 "Plugin 'vim-scripts/AutoComplPop.git'
 Plugin 'ervandew/supertab'
 
 Plugin 'tobyS/pdv'
-Plugin 'tobyS/vmustache.git'
-
-Plugin 'Shougo/vimproc.vim'
-
-" Plugin 'mileszs/ack.vim.git'
-
-" Plugin 'sjbach/lusty.git'
-" Plugin 'Herzult/phpspec-vim.git'
-" Plugin 'vim-scripts/bufkill.vim.git'
-" Plugin 'editorconfig/editorconfig-vim.git'
-" Plugin 'kchmck/vim-coffee-script'
-" Plugin 'aaronj1335/underscore-templates.vim.git'
-" Plugin 'mattn/emmet-vim'
-" Plugin 'mustache/vim-mustache-handlebars'
 
 Plugin 'airblade/vim-gitgutter'
-" Plugin 'Lokaltog/vim-distinguished.git'
-" Plugin 'kana/vim-smartinput.git'
-" Plugin 'danro/rename.vim.git'
-" Plugin 'lunaru/vim-less'
-
-" Plugin 'Lokaltog/vim-powerline.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -148,7 +109,7 @@ let g:solarized_visibility="normal"
 set background=dark
 colorscheme solarized
 color solarized
-set cursorline 
+set cursorline
 set t_Co=256 " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
 
 
@@ -260,48 +221,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 "~~~~~~~~~~~~~~~~~~~~
-" ctrlptagjump
-"~~~~~~~~~~~~~~~~~~~~
-noremap <silent> <C-t> :CtrlPTag<cr>
-" Affiche la liste des tags
-nnoremap <c-]> :CtrlPtjump<cr>
-vnoremap <c-]> :CtrlPtjumpVisual<cr>
-" si 1 résultat, ouverture directe
-"let g:ctrlp_tjump_only_silent = 1 
-
-"~~~~~~~~~~~~~~~~~~~~
-" Tagbar
-"~~~~~~~~~~~~~~~~~~~~
-nmap <F8> :TagbarToggle<CR>
-
-"~~~~~~~~~~~~~~~~~~~~
-" YouCompleteMe
-"~~~~~~~~~~~~~~~~~~~~
-" Ne pas montrer la fenêtre de détail en haut
-"set completeopt-=preview
-"let g:ycm_add_preview_to_completeopt = 0
-
-"~~~~~~~~~~~~~~~~~~~~
-" Multiple cursors
-"~~~~~~~~~~~~~~~~~~~~
-" ctrl+x
-let g:multi_cursor_next_key='<C-x>'
-
-"~~~~~~~~~~~~~~~~~~~~
-" Startify //Totally useless. Priceless.
-"~~~~~~~~~~~~~~~~~~~~
-let g:startify_custom_header = [
-\ '  _    _                       _____ _______  ',
-\ ' | |  | |                     |_   _|__   __| ',
-\ ' | |  | |_ __ ___   __ _ _ __   | |    | |    ',
-\ ' | |  | |  _ ` _ \ / _` |  _ \  | |    | |    ',
-\ ' | |__| | | | | | | (_| | | | |_| |_   | |    ',
-\ '  \____/|_| |_| |_|\__,_|_| |_|_____|  |_|    ',
-\ '',
-\ '',
-\ ]
-
-"~~~~~~~~~~~~~~~~~~~~
 " syntastic
 "~~~~~~~~~~~~~~~~~~~~
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
@@ -355,23 +274,6 @@ inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
 inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
-
-"~~~~~~~~~~~~~~~~~~~~
-" vim-symfony configuration
-"~~~~~~~~~~~~~~~~~~~~
-let g:symfony_app_console_caller= "php"
-let g:symfony_app_console_path= "app/console"
-noremap <leader>sr :call CompleteSymfonyRouter()<CR>
-noremap <leader>sc :call CompleteSymfonyContainer()<CR>
-
-let g:symfony_enable_shell_mapping = 0 "disable the mapping of symfony console
-" Use your key instead of default key which is <C-F>
-map <leader>v :execute ":!"g:symfony_enable_shell_cmd<CR>
-
-"~~~~~~~~~~~~~~~~~~~~
-" symfony shortcuts
-"~~~~~~~~~~~~~~~~~~~~
-set path+=**
 
 "~~~~~~~~~~~~~~~~~~~~
 " Functions
