@@ -6,6 +6,8 @@ alias importdump='mysql -u root -proot'
 alias exportdump='mysqldump -u root -proot --skip-triggers'
 alias exportpgdump='pg_dump -O -c -x'
 alias rmdsstores='find ./ -type f | grep .DS_Store | xargs rm'
+alias sniff='phpcs --standard=UmanitSymfony2 --colors -s '
+alias snifffix='phpcbf --standard=UmanitSymfony2 '
 
 alias sf='php -d memory_limit=-1 app/console'
 alias vim='/usr/local/bin/vim'
