@@ -65,6 +65,8 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'kien/ctrlp.vim.git'
 
 Plugin 'bling/vim-airline.git'
+Plugin 'vim-airline/vim-airline-themes'
+
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'nanotech/jellybeans.vim.git'
 Plugin 'jistr/vim-nerdtree-tabs.git'
@@ -134,12 +136,8 @@ let g:nerdtree_tabs_open_on_gui_startup=1
 " Airline
 "~~~~~~~~~~~~~~~~~~~~
 let g:airline#extensions#tabline#enabled=1
-if !exists('g:airline_powerline_fonts')
-    " Use the default set of separators with a few customizations
-    let g:airline_left_sep='›' " Slightly fancier than '>'
-    let g:airline_right_sep='‹' " Slightly fancier than '<'
-    set linespace=0
-endif
+let g:airline_powerline_fonts = 1
+let g:airline_theme='light'
 
 "~~~~~~~~~~~~~~~~~~~~
 " auto completion
