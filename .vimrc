@@ -73,6 +73,8 @@ Plugin 'jistr/vim-nerdtree-tabs.git'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'edsono/vim-matchit'
 Plugin 'ConradIrwin/vim-bracketed-paste'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'godlygeek/tabular.git'
 
