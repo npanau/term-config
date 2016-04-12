@@ -16,6 +16,9 @@ alias vim='/usr/local/bin/vim'
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 
+#Météo
+alias meteo="curl -4 wttr.in/Nantes"
+
 #Navigation
 alias ..="cd .."
 alias ...="cd ../.."
