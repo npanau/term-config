@@ -88,7 +88,7 @@ Plugin 'ap/vim-css-color'
 
 Plugin 'beyondwords/vim-twig'
 
-Plugin 'Shougo/neocomplete.vim.git'
+"Plugin 'Shougo/neocomplete.vim.git'
 Plugin 'spf13/PIV'
 "Plugin 'vim-scripts/AutoComplPop.git'
 Plugin 'ervandew/supertab'
