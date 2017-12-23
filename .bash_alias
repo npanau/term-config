@@ -5,13 +5,15 @@ alias hosts='sudo vim /etc/hosts'
 alias importdump='mysql -u root -proot'
 alias pgimportdump='psql -U root'
 alias exportdump='mysqldump -u root -proot --skip-triggers'
-alias pgexportdump='pg_dump -O -c -x -n public -f'
+alias pgexportdumpclean='pg_dump -U root -O -c -x -n public -f'
+alias pgexportdump='pg_dump -U root -O -c -x -f'
 alias exportpgdump='pg_dump -O -c -x'
 alias rmdsstores='find ./ -type f | grep .DS_Store | xargs rm'
 alias sniff='phpcs --standard=UmanitSymfony2 --colors -s '
 alias snifffix='phpcbf --standard=UmanitSymfony2 '
 
 alias sf='php -d memory_limit=-1 app/console'
+alias sf3='php -d memory_limit=-1 bin/console'
 alias vim='/usr/local/bin/vim'
 
 #Recursively delete `.DS_Store` files

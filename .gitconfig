@@ -29,11 +29,16 @@
     # Enhanced logs
     pl = !git log --all --decorate --oneline --graph
 
+      ignore = !sh -c 'git ls-files -z $0 | xargs -0 git update-index --skip-worktree'
+      unignore = !sh -c 'git ls-files -z $0 | xargs -0 git update-index --no-skip-worktree'
+      ignored = !git ls-files -v | grep \"^S\"
+
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
 [core]
+    fileMode = false
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = /Users/nico/.gitignore
 	attributesfile = ~/.gitattributes

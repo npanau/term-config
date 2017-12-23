@@ -62,7 +62,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree.git'
-Plugin 'kien/ctrlp.vim.git'
 
 Plugin 'bling/vim-airline.git'
 Plugin 'vim-airline/vim-airline-themes'
@@ -70,10 +69,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'nanotech/jellybeans.vim.git'
 Plugin 'jistr/vim-nerdtree-tabs.git'
-Plugin 'majutsushi/tagbar.git'
 Plugin 'edsono/vim-matchit'
 Plugin 'ConradIrwin/vim-bracketed-paste'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'godlygeek/tabular.git'
@@ -86,14 +83,7 @@ Plugin 'scrooloose/syntastic.git'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'ap/vim-css-color'
 
-Plugin 'beyondwords/vim-twig'
-
-"Plugin 'Shougo/neocomplete.vim.git'
-Plugin 'spf13/PIV'
-"Plugin 'vim-scripts/AutoComplPop.git'
 Plugin 'ervandew/supertab'
-
-Plugin 'tobyS/pdv'
 
 Plugin 'airblade/vim-gitgutter'
 
