@@ -1,6 +1,6 @@
 #Web stuff
 alias apache2='sudo apachectl -k'
-alias vhost='cd /etc/apache2/virtualhosts/'
+alias vhost='cd /usr/local/etc/httpd/virtualhost-enabled/'
 alias hosts='sudo vim /etc/hosts'
 alias importdump='mysql -u root -proot'
 alias pgimportdump='psql -U root'
