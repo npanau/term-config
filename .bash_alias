@@ -12,12 +12,12 @@ alias rmdsstores='find ./ -type f | grep .DS_Store | xargs rm'
 alias sniff='phpcs --standard=UmanitSymfony2 --colors -s '
 alias snifffix='phpcbf --standard=UmanitSymfony2 '
 
-alias sf='php -d memory_limit=-1 app/console'
-alias sf3='php -d memory_limit=-1 bin/console'
+alias sf='php70 -d memory_limit=-1 app/console'
 alias vim='/usr/local/bin/vim'
 
-alias php56='/usr/local/Cellar/php@5.6/5.6.37/bin/php'
-alias php70='/usr/local/Cellar/php@7.0/7.0.31/bin/php'
+alias php56='/usr/local/Cellar/php@5.6/5.6.40/bin/php'
+alias php72='/usr/local/Cellar/php/7.2.24/bin/php'
+alias php70='/usr/local/Cellar/php@7.0/7.0.33/bin/php'
 
 #Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
