@@ -16,7 +16,7 @@ set noswapfile
 
 " -- Affichage
 set title " Met a jour le titre de votre fenetre
-set relativenumber " Affiche le numero des lignes
+set number " Affiche le numero des lignes
 set ruler " Affiche la position actuelle du curseur
 set wrap " Affiche les lignes trop longues sur plusieurs
 
@@ -69,21 +69,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'nanotech/jellybeans.vim.git'
 Plugin 'jistr/vim-nerdtree-tabs.git'
-Plugin 'edsono/vim-matchit'
-Plugin 'ConradIrwin/vim-bracketed-paste'
-Plugin 'jiangmiao/auto-pairs'
 
-Plugin 'godlygeek/tabular.git'
-
-Plugin 'tpope/vim-fugitive.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-
-Plugin 'scrooloose/syntastic.git'
-
-Plugin 'hail2u/vim-css3-syntax.git'
-Plugin 'ap/vim-css-color'
-
-Plugin 'ervandew/supertab'
 
 Plugin 'airblade/vim-gitgutter'
 
@@ -132,40 +119,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='light'
 
 "~~~~~~~~~~~~~~~~~~~~
-" auto completion
-"~~~~~~~~~~~~~~~~~~~~
-set wildmenu                        " Better completion
-set wildmode=list:longest           " BASH style completion
-
-"au FileType c,cpp,java,go,php,javascript,python,twig,xml,yml
-
-au BufNewFile,BufRead *.tpl set ft=smarty
-au BufNewFile,BufRead *.twig set ft=twig
-
-au BufNewFile,BufRead *md set ft=markdown
-
-"au filetype javascript set omnifunc=javascriptcomplete#CompleteJS
-au filetype html set omnifunc=htmlcomplete#CompleteTags
-"au filetype css set omnifunc=csscomplete#CompleteCSS
-"au filetype php set omnifunc=phpcomplete#CompletePHP
-
-"~~~~~~~~~~~~~~~~~~~~
-" Ctags
-"~~~~~~~~~~~~~~~~~~~~
-" -- emplacement custom cTags
-" pour coller avec la commande d'indexation :
-" ctags -f .ctags -h '.php' -R \
-" --exclude="\.svn" \
-" --exclude="\.git" \
-" --totals=yes \
-" --tag-relative=yes \
-" --PHP-kinds=+cf \
-" --regex-PHP='/abstract class ([^ ]*)/\1/c/' \
-" --regex-PHP='/interface ([^ ]*)/\1/c/' \
-" --regex-PHP='/(public |static |abstract |protected |private )+function ([^ (]*)/\2/f/'
-set tags+=vendor.tags
-
-"~~~~~~~~~~~~~~~~~~~~
 " Custom mapping
 "~~~~~~~~~~~~~~~~~~~~
 " Déplacement d'une ligne de texte Netbeans' style ! (haut / droit / bas
@@ -198,72 +151,6 @@ inoremap (<cr> (<cr>)<c-o><s-o>
 " Résultats précédants / suivants : :cp / :cn
 " :cwindow pour ouvrir la fenêtre de résultat
 command! -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
-
-"~~~~~~~~~~~~~~~~~~~~
-" ctrlp
-"~~~~~~~~~~~~~~~~~~~~
-let g:ctrlp_working_path_mode = 0
-"let g:ctrlp_working_path_mode = 'ra'
-nnoremap <silent> <D-t> :CtrlP<CR>
-nnoremap <silent> <D-r> :CtrlPMRU<CR>
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v([\/]\.(git|hg|svn))|([\/]vendor)|([\/]node_modules)|([\/]compiled)|([\/]dist)|([\/]app/lib)|([\/]bower_components)|([\/]doc)$',
-  \ }
-
-"~~~~~~~~~~~~~~~~~~~~
-" syntastic
-"~~~~~~~~~~~~~~~~~~~~
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-" Utiliser syntastic à la demande plutôt qu'automatiquement
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-
-"~~~~~~~~~~~~~~~~~~~~
-" Supertab
-"~~~~~~~~~~~~~~~~~~~~
-let g:SuperTabDefaultCompletionType = "<c-n>"
-
-"~~~~~~~~~~~~~~~~~~~~
-" Neocomplete
-"~~~~~~~~~~~~~~~~~~~~
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-"~~~~~~~~~~~~~~~~~~~~
-" UltiSnips
-"~~~~~~~~~~~~~~~~~~~~
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-let g:UltiSnipsDontReverseSearchPath = 1 " for override to work with Vundle
-
-"~~~~~~~~~~~~~~~~~~~~
-" PIV
-"~~~~~~~~~~~~~~~~~~~~
-set nofoldenable
-let g:DisableAutoPHPFolding = 1
-
-"~~~~~~~~~~~~~~~~~~~~
-" PDV
-"~~~~~~~~~~~~~~~~~~~~
-let g:pdv_template_dir = $HOME ."/.vim/doc_templates"
-nnoremap <Leader>d :call pdv#DocumentWithSnip()<CR>
-
-"~~~~~~~~~~~~~~~~~~~~
-" PHPNamespace
-"~~~~~~~~~~~~~~~~~~~~
-inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-noremap <Leader>u :call PhpInsertUse()<CR>
-inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
-noremap <Leader>e :call PhpExpandClass()<CR>
 
 "~~~~~~~~~~~~~~~~~~~~
 " Functions
