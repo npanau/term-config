@@ -10,7 +10,7 @@ alias pgexportdump='pg_dump -U root -O -c -x -f'
 alias exportpgdump='pg_dump -O -c -x'
 alias rmdsstores='find ./ -type f | grep .DS_Store | xargs rm'
 
-alias sf='php70 -d memory_limit=-1 app/console'
+alias sf='php -d memory_limit=-1 bin/console'
 alias vim='/usr/local/bin/vim'
 
 alias php56='/usr/local/Cellar/php@5.6/5.6.40/bin/php'
