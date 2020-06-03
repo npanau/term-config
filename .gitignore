@@ -12,3 +12,6 @@ Thumbs.db
 
 #VIM
 .vim/bundle/*
+
+#PHPStorm
+.idea
