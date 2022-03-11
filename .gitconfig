@@ -11,6 +11,10 @@
 	p = !"git pull"
 		# Push all changes
 	ps = !"git push"
+		# Push all changes, skip ci
+	pss = !"git push -o ci.skip"
+		# Show branches
+	b = !"git branch"
 	# Clone a repository including all submodules
 	c = clone --recursive
 	# Commit all changes
@@ -100,3 +104,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[pull]
+	rebase = false
