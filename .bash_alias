@@ -1,6 +1,6 @@
 #Web stuff
 alias apache2='sudo apachectl -k'
-alias vhost='cd /usr/local/etc/httpd/virtualhost-enabled/'
+alias vhost='cd /Users/nico/Seafile/Perso/httpd/virtualhost-enabled/'
 alias hosts='sudo vim /etc/hosts'
 alias importdump='mysql -u root -proot'
 alias pgimportdump='psql -U root'
@@ -11,11 +11,6 @@ alias exportpgdump='pg_dump -O -c -x'
 alias rmdsstores='find ./ -type f | grep .DS_Store | xargs rm'
 
 alias sf='php -d memory_limit=-1 bin/console'
-alias vim='/usr/local/bin/vim'
-
-alias php56='/usr/local/Cellar/php@5.6/5.6.40/bin/php'
-alias php72='/usr/local/Cellar/php/7.2.24/bin/php'
-alias php70='/usr/local/Cellar/php@7.0/7.0.33/bin/php'
 
 #Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
@@ -44,7 +39,3 @@ alias la="ls -laF ${colorflag}"
 
 alias flush="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
-#todo.txt
-alias t='/Users/nico/Dropbox/todo/todo.sh -d Users/nico/Dropbox/todo/todo.cfg'
-compdef _todo.sh t
-export PATH=/Users/nico/Dropbox/todo:$PATH
