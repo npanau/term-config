@@ -12,6 +12,8 @@ source ~/.git-completion.sh
 
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/sbin
+
 
 [ -s "/Users/nico/.scm_breeze/scm_breeze.sh" ] && source "/Users/nico/.scm_breeze/scm_breeze.sh"
 

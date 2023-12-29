@@ -10,8 +10,8 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-#VIM
+# VIM
 .vim/bundle/*
 
-#PHPStorm
+# PHPStorm
 .idea
