@@ -1,6 +1,6 @@
 #Web stuff
 alias apache2='sudo apachectl -k'
-alias vhost='cd /Users/nico/Seafile/Perso/httpd/virtualhost-enabled/'
+alias vhost='cd /Users/nico/Dropbox/Perso/_work/tech/httpd/virtualhost-enabled/'
 alias hosts='sudo vim /etc/hosts'
 alias pgimportdump='psql -U root'
 alias pgexportdumpclean='pg_dump -U root -O -c -x -n public -f'
