@@ -19,6 +19,6 @@ export PATH=$PATH:/usr/local/sbin
 [ -s "/Users/nico/.scm_breeze/scm_breeze.sh" ] && source "/Users/nico/.scm_breeze/scm_breeze.sh"
 
 
-export ANSIBLE_VAULT_PASSWORD_FILE="$HOME/Seafile/Perso/.deploy-ansible-vault-password"
+export ANSIBLE_VAULT_PASSWORD_FILE="$HOME/.deploy-ansible-vault-password"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
