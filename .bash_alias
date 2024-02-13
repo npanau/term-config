@@ -7,6 +7,7 @@ alias pgexportdumpclean='pg_dump -U root -O -c -x -n public -f'
 alias pgexportdump='pg_dump -U root -O -c --if-exists -x -f'
 alias rmdsstores='find ./ -type f | grep .DS_Store | xargs rm'
 alias gs='git status --long'
+alias lasttag='git describe --tags --abbrev=0'
 
 alias sf='php -d memory_limit=-1 bin/console'
 
